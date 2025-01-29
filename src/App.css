@@ -1,0 +1,43 @@
+/* src/App.css */
+
+.home-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.search-input {
+  margin: 20px 0;
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.file-browser {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.file-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.file-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 20px;
+}
