@@ -1,0 +1,26 @@
+/* src/components/FileItem.css */
+.file-item {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .file-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .file-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .file-name {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+  }
