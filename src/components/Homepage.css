@@ -1,12 +1,33 @@
 /* src/components/HomePage.css */
 .home-page {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .home-page p {
-    text-align: center;
-    font-size: 1.2rem;
-    color: #555;
-  }
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cart-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.sidebar-button {
+  position: absolute;
+  top: 60px; /* Adjusted to be below the title */
+  left: 20px;
+}
+
+.home-page p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}

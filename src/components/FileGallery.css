@@ -1,30 +1,27 @@
-/* src/components/ImageCarousel.css */
+/* src/components/FileGallery.css */
 
-.carousel-container {
-  width: 100%; /* Full width */
-  max-width: 50px; /* Optional: Max width for larger screens */
+.file-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px; /* Increased from 50px to 800px */
   margin: 20px auto;
   text-align: center;
 }
 
-.carousel-image {
-  max-height: 10vh; /* Set to desired viewport height percentage */
-  width: auto; /* Maintain aspect ratio */
-  height: auto;
+.file-item {
+  margin: 10px;
+}
+
+.file-image {
+  width: 200px; /* Set desired width */
+  height: 200px; /* Set desired height */
+  object-fit: cover;
   border-radius: 8px;
-  object-fit: contain; /* Ensure entire image is visible */
 }
 
-.carousel-caption {
-  margin-top: 10px;
-  font-weight: bold;
-  font-size: 1.2rem;
+.file-name {
+  margin-top: 5px;
+  font-size: 1rem;
   color: #333;
-}
-
-.no-images {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #555;
-  margin: 20px 0;
 }

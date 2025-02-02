@@ -8,36 +8,34 @@ const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 async function fetchProductImages() {
   try {
-      // Query the productTable to get image paths
-      const { data, error } = await supabase
-          .from('productTable')
-          .select('id, name, imagePath, Tags');
+    // Query the productTable to get image paths and prices
+    const { data, error } = await supabase
+      .from('productTable')
+      .select('id, name, imagePath, Tags, priceUSD');
 
-      if (error) {
-          throw new Error(`Error fetching data: ${error.message}`);
-      }
+    if (error) {
+      throw new Error(`Error fetching data: ${error.message}`);
+    }
 
-      if (!data) {
-          console.log('No products found.');
-          return [];
-      }
-
-      // Log and return image paths
-      console.log('Fetched products:', data);
-      return data.map(product => ({
-          id: product.id,
-          name: product.name,
-          imagePath: product.imagePath,
-          Tags: product.Tags
-      }));
-  } catch (err) {
-      console.error('Error:', err);
+    if (!data) {
+      console.log('No products found.');
       return [];
+    }
+
+    // Log and return image paths and prices
+    console.log('Fetched products:', data);
+    return data.map(product => ({
+      id: product.id,
+      name: product.name,
+      imagePath: product.imagePath,
+      tags: product.Tags,
+      price: product.priceUSD,
+    }));
+  } catch (err) {
+    console.error('Error:', err);
+    return [];
   }
 }
-
-
-
 
 export { fetchProductImages };
 export default supabase;
