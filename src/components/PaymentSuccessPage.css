@@ -1,0 +1,49 @@
+.payment-success-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.payment-success-container h1 {
+  color: #4CAF50;
+}
+
+.payment-success-container p {
+  margin: 10px 0;
+}
+
+.file-list {
+  margin: 20px 0;
+}
+
+.file-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.file-list li {
+  margin: 10px 0;
+}
+
+.file-list a {
+  color: #0078d4;
+  text-decoration: none;
+}
+
+.file-list a:hover {
+  text-decoration: underline;
+}
+
+.continue-shopping-button {
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.continue-shopping-button:hover {
+  background-color: #005bb5;
+}

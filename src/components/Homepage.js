@@ -39,8 +39,12 @@ function Homepage() {
 
   const addToCart = (file) => {
     if (!cartItems.find(item => item.id === file.id)) {
-      setCartItems([...cartItems, { id: file.id, name: file.name, price: file.price }]);
+      setCartItems([...cartItems, { id: file.id, name: file.name, price: file.price, filePath: file.filePath }]);
     }
+  };
+
+  const handleToggleCart = () => {
+    setIsFileDetailsOpen(false);
   };
 
   const filteredFiles = files.filter(file => {
@@ -60,14 +64,9 @@ function Homepage() {
     return matchesSearch && matchesActiveTags && matchesGameSystem && matchesFaction && matchesArmies && matchesTags;
   });
 
-  const handleToggleCart = () => {
-    setIsFileDetailsOpen(false);
-  };
-
   return (
     <div className="home-page">
       <Header />
-      <h1 className="title">Archaeotech Armory</h1>
 
       <Sidebar
         searchTerm={searchTerm}

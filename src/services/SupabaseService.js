@@ -11,7 +11,7 @@ async function fetchProductImages() {
     // Query the productTable to get image paths and prices
     const { data, error } = await supabase
       .from('productTable')
-      .select('id, name, imagePath, Tags, priceUSD');
+      .select('id, name, imagePath, Tags, priceUSD, filePath');
 
     if (error) {
       throw new Error(`Error fetching data: ${error.message}`);
@@ -30,6 +30,7 @@ async function fetchProductImages() {
       imagePath: product.imagePath,
       tags: product.Tags,
       price: product.priceUSD,
+      filePath: product.filePath
     }));
   } catch (err) {
     console.error('Error:', err);

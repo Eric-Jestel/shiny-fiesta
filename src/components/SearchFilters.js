@@ -17,7 +17,7 @@ const CATEGORIES = {
         },
         {
           name: 'Xenos',
-          armies: ['Tyrannid', 'Ork', 'Tau', 'Eldar', 'Necron'],
+          armies: ['Tyranid', 'Ork', 'Tau', 'Eldar', 'Necron'],
         },
       ],
     },
